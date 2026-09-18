@@ -19,6 +19,8 @@ class RequestManager {
 
         void setModel(std::string modelName);
 
+        std::vector<std::string> getModelList();
+
         void message();
 
 };

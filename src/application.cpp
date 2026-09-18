@@ -13,6 +13,10 @@ std::string Application::chooseModel() {
 
 void Application::run() {
 
+    for (std::string m : reqM.getModelList()) {
+        std::cout << m << std::endl;
+    }
+
     reqM.setModel(chooseModel());
 
     while (true) {

@@ -3,8 +3,6 @@
 Request::Request(std::string modelName, std::string userPrompt, Effort modelEffort)
     : model(modelName), prompt(userPrompt), effort(modelEffort) {}
 
-
-
 json Request::build() {
 
     json request;

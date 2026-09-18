@@ -80,3 +80,26 @@ void RequestManager::message() {
     }
 
 }
+
+std::vector<std::string> RequestManager::getModelList() {
+    std::string urlDir = "/api/tags";
+
+    auto response = client.Get(urlDir);
+
+    if (!response) {
+        throw std::runtime_error("HTTP request failed: " +
+            httplib::to_string(response.error()));
+    }
+    if (response->status != 200) {
+        throw std::runtime_error("Unexpected status: " + std::to_string(response->status));
+    }
+
+    json rawModelList = json::parse(response->body);
+
+    std::vector<std::string> list;
+    for (const auto& model : rawModelList["models"]) {
+        list.push_back(model["name"].get<std::string>());
+    }
+
+    return list;
+}

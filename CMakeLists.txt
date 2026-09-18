@@ -12,7 +12,9 @@ add_executable(Code main.cpp
     src/requestManager.cpp
     include/requestManager.h
     src/application.cpp
-    include/application.h)
+    include/application.h
+    external/json.hpp
+    external/httplib.h)
 
 if(APPLE)
     execute_process(
@@ -27,6 +29,7 @@ target_include_directories(Code PRIVATE external)
 
 target_compile_definitions(Code PRIVATE CPPHTTPLIB_OPENSSL_SUPPORT)
 target_link_libraries(Code PRIVATE OpenSSL::SSL OpenSSL::Crypto)
+
 
 if(APPLE)
     target_link_libraries(Code PRIVATE "-framework CoreFoundation" "-framework Security")

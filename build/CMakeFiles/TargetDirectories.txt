@@ -1,0 +1,3 @@
+/Users/sasha/Documents/GitHub/Code/build/CMakeFiles/Code.dir
+/Users/sasha/Documents/GitHub/Code/build/CMakeFiles/edit_cache.dir
+/Users/sasha/Documents/GitHub/Code/build/CMakeFiles/rebuild_cache.dir

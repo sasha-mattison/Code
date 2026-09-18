@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/Users/sasha/Documents/GitHub/Code/build",
+  "command": "/usr/bin/c++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/Users/sasha/Documents/GitHub/Code/include -I/Users/sasha/Documents/GitHub/Code/external -isystem /opt/homebrew/Cellar/openssl@3/3.6.4/include -g -std=gnu++26 -arch arm64 -o CMakeFiles/Code.dir/main.cpp.o -c /Users/sasha/Documents/GitHub/Code/main.cpp",
+  "file": "/Users/sasha/Documents/GitHub/Code/main.cpp",
+  "output": "CMakeFiles/Code.dir/main.cpp.o"
+},
+{
+  "directory": "/Users/sasha/Documents/GitHub/Code/build",
+  "command": "/usr/bin/c++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/Users/sasha/Documents/GitHub/Code/include -I/Users/sasha/Documents/GitHub/Code/external -isystem /opt/homebrew/Cellar/openssl@3/3.6.4/include -g -std=gnu++26 -arch arm64 -o CMakeFiles/Code.dir/src/request.cpp.o -c /Users/sasha/Documents/GitHub/Code/src/request.cpp",
+  "file": "/Users/sasha/Documents/GitHub/Code/src/request.cpp",
+  "output": "CMakeFiles/Code.dir/src/request.cpp.o"
+},
+{
+  "directory": "/Users/sasha/Documents/GitHub/Code/build",
+  "command": "/usr/bin/c++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/Users/sasha/Documents/GitHub/Code/include -I/Users/sasha/Documents/GitHub/Code/external -isystem /opt/homebrew/Cellar/openssl@3/3.6.4/include -g -std=gnu++26 -arch arm64 -o CMakeFiles/Code.dir/src/requestManager.cpp.o -c /Users/sasha/Documents/GitHub/Code/src/requestManager.cpp",
+  "file": "/Users/sasha/Documents/GitHub/Code/src/requestManager.cpp",
+  "output": "CMakeFiles/Code.dir/src/requestManager.cpp.o"
+},
+{
+  "directory": "/Users/sasha/Documents/GitHub/Code/build",
+  "command": "/usr/bin/c++ -DCPPHTTPLIB_OPENSSL_SUPPORT -I/Users/sasha/Documents/GitHub/Code/include -I/Users/sasha/Documents/GitHub/Code/external -isystem /opt/homebrew/Cellar/openssl@3/3.6.4/include -g -std=gnu++26 -arch arm64 -o CMakeFiles/Code.dir/src/application.cpp.o -c /Users/sasha/Documents/GitHub/Code/src/application.cpp",
+  "file": "/Users/sasha/Documents/GitHub/Code/src/application.cpp",
+  "output": "CMakeFiles/Code.dir/src/application.cpp.o"
+}
+]
