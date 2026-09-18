@@ -8,7 +8,11 @@ find_package(OpenSSL REQUIRED)
 
 add_executable(Code main.cpp
     src/request.cpp
-    include/request.h)
+    include/request.h
+    src/requestManager.cpp
+    include/requestManager.h
+    src/application.cpp
+    include/application.h)
 
 if(APPLE)
     execute_process(
@@ -24,3 +28,6 @@ target_include_directories(Code PRIVATE external)
 target_compile_definitions(Code PRIVATE CPPHTTPLIB_OPENSSL_SUPPORT)
 target_link_libraries(Code PRIVATE OpenSSL::SSL OpenSSL::Crypto)
 
+if(APPLE)
+    target_link_libraries(Code PRIVATE "-framework CoreFoundation" "-framework Security")
+endif()

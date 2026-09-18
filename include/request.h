@@ -19,7 +19,7 @@ struct Request {
     std::string prompt;
     Effort effort;
 
-    Request(std::string userPrompt, Effort modelEffort); 
+    Request(std::string modelName, std::string userPrompt, Effort modelEffort); 
     json build();
 };
 

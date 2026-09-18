@@ -1,5 +1,6 @@
-#include <iostream>
+#include "application.h"
 
-int main(int, char**){
-    std::cout << "Hello, from Code!\n";
+int main() {
+    Application app;
+    app.run();
 }
