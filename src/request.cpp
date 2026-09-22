@@ -7,7 +7,7 @@ json Request::build() {
 
     json request;
 
-    bool thinkingEnabled = true;
+    bool thinkingEnabled = false; //TODO Change
     std::string effortString;
     
     switch (effort) {

@@ -13,11 +13,14 @@ std::string Application::chooseModel() {
 
 void Application::run() {
 
-    for (std::string m : reqM.getModelList()) {
-        std::cout << m << std::endl;
-    }
+    // for (std::string m : reqM.getModelList()) {
+    //     std::cout << m << std::endl;
+    // }
 
-    reqM.setModel(chooseModel());
+    //reqM.setModel(chooseModel());
+
+    reqM.chooseModel();
+    //reqM.setModel("gemma3:270m");
 
     while (true) {
         reqM.message();

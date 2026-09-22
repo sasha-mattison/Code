@@ -18,9 +18,14 @@ class RequestManager {
         RequestManager(std::string endpointURL);
 
         void setModel(std::string modelName);
+        void chooseModel();
 
         std::vector<std::string> getModelList();
 
         void message();
 
+};
+
+class ContextManager {
+    int maxContext;
 };

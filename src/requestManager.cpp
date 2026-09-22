@@ -10,6 +10,23 @@ void RequestManager::setModel(std::string modelName) {
     model = modelName;
 }
 
+void RequestManager::chooseModel() {
+    std::cout << "Choose a model: \n";
+    int modelNum = 1;
+    auto modelList = getModelList();
+    for (std::string m : modelList) {
+        std::cout << std::to_string(modelNum) << ": " << m << std::endl;
+        modelNum++;
+    }
+    std::cout << "Choice: ";
+    std::string userIn;
+    std::cin >> userIn;
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    int userChoice = std::stoi(userIn);
+
+    setModel(modelList[userChoice-1]);
+}
+
 std::string RequestManager::getUserPrompt() {
     std::string prompt;
     std::cout << "Enter Prompt: ";
@@ -78,6 +95,15 @@ void RequestManager::message() {
         std::cerr << res.body << std::endl;
         return;
     }
+
+    int tokenCount = lastChunk.value("eval_count", 0);
+    long double responseTime = (lastChunk.value("prompt_eval_duration", 0LL) + lastChunk.value("eval_duration", 0LL)) / 1e9L;
+    double tokensPerSecond = tokenCount/responseTime;
+
+    std::cout << tokenCount << std::endl;
+    std::cout << responseTime << std::endl;
+    std::cout << tokensPerSecond << std::endl;
+
 
 }
 
