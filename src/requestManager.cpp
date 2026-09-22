@@ -58,9 +58,6 @@ void RequestManager::message() {
             return;
             break;
         }
-        case Commands::EFFORT: {
-            std::string mod = 
-        }
         default: {
             break;
         }
